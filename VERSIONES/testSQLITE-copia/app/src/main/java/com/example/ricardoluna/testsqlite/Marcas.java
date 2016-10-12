@@ -5,17 +5,17 @@ package com.example.ricardoluna.testsqlite;
  */
 public class Marcas {
     String  nombre;
-    int clave;
+    int idMarca;
 
     public Marcas(int idMarca, String nombre) {
-        this.clave = idMarca;
+        this.idMarca = idMarca;
         this.nombre = nombre;
     }
     public Marcas( ) {
     }
 
     public int getIdMarca() {
-        return clave;
+        return idMarca;
     }
 
     public String getNombre() {
@@ -23,7 +23,7 @@ public class Marcas {
     }
 
     public void setIdMarca(int idMarca) {
-        this.clave = idMarca;
+        this.idMarca = idMarca;
     }
 
     public void setNombre(String nombre) {

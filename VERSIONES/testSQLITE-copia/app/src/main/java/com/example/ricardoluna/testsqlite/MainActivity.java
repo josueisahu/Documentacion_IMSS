@@ -131,13 +131,11 @@ public class MainActivity extends AppCompatActivity {
                 ////////////////OBTIENE JSON ////////////////////////////////////
                 JSONArray jArray = new JSONArray(jsonResult);
 
-                db.fastInsert(jArray);
-          /*      JSONObject jObject = new JSONObject(String.valueOf(jArray.getJSONObject(0)));
+                JSONObject jObject = new JSONObject(String.valueOf(jArray.getJSONObject(0)));
 
                 /////////////SEPARA EL JSON EN CADA TABLA E INSERTA///////////////
                 JSONArray Datos = jObject.getJSONArray("Usuarios");
-                //db.insertFastUsuarios(Datos);
-              JSONObject Object;
+                JSONObject Object;
 
                 for (int i=0; i < Datos.length(); i++)
                 {
@@ -153,7 +151,6 @@ public class MainActivity extends AppCompatActivity {
 
                 jObject = new JSONObject(String.valueOf(jArray.getJSONObject(1)));
                 Datos = jObject.getJSONArray("Unidades");
-                //db.insertFastUnidades(Datos);
                 for (int i=0; i < Datos.length(); i++)
                 {
                     Object = Datos.getJSONObject(i);
@@ -289,7 +286,7 @@ public class MainActivity extends AppCompatActivity {
 
                     String matricula = Object.getString("matricula");
                     String nombre = URLDecoder.decode(Object.getString("nombre"),"UTF-8");
-                    String puesto = Object.getString("puesto");
+                    String puesto = Object.getString("puesto"); 
                     Log.i("VALOR", ""+i);
                     Log.i("matricula: ", matricula);
                 }
@@ -359,7 +356,7 @@ public class MainActivity extends AppCompatActivity {
                     Log.i("VALOR", ""+i);
                     Log.i("folio: ", folio);
                 }
-*/
+
             } catch (JSONException e) {
                 e.printStackTrace();
                 Log.i("ERROR 1: ", e.getMessage());
